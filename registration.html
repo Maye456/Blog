@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <!-- 
+	Project Name: Milestone 1
+	Version: 1.0
 	Author: Jeanna Maye E. Benitez
 	File: registration.html
 	Date: January 30, 2020
 	
 	Description: 
 	An HTML form to take user input for registration.
+	
+	References: https://www.w3schools.com/howto/howto_css_register_form.asp
  -->
 <html>
 <head>
@@ -100,7 +104,7 @@ hr {
 				<label for="email"><b>Email</b></label><br/>
    				<input type="text" placeholder="Enter Email" name="email" required><br/>
 						<!-- UserName -->
-				<label for="userName"><b>UserName</b></label><br/>
+				<label for="userName"><b>Username</b></label><br/>
    				<input type="text" placeholder="Enter A UserName" name="userName" required><br/>
    						<!-- Password -->
    				<label for="password"><b>Password</b></label><br/>
@@ -109,7 +113,11 @@ hr {
    				<label for="psw-repeat"><b>Re-Enter Password</b></label><br/>
     			<input type="password" placeholder="Repeat Password" name="psw-repeat" required><br/>
     			
-    			<button type="submit" class="registerbtn">Register</button>
+    			<button type="submit" class="registerbtn" name="submit">Register</button>
+    			
+    			<div class="container signin">
+					<p>Already have an account? <a href="login.html">Sign in</a></p>
+				</div>
 			</form>
 		</section>
 		</div>

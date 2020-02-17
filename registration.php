@@ -1,6 +1,9 @@
 <?php
-/* Author: Jeanna Maye E. Benitez
- File: registrationPageHandler.php
+/* 
+ Project Name: Milestone 1
+ Version: 1.0
+ Author: Jeanna Maye E. Benitez
+ File: registration.php
  Date: January 30, 2020
  
  Description:
@@ -9,22 +12,36 @@
 ?>
 
 <?php 
-$hostName = "localhost";
-$userName = "root";
-$password = "root";
+// Error Report
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+
+// Global Variables and Constants
 $dbName = "milestone1";
-$firstName = $_POST['firstName'];
-$lastName = $_POST['lastName'];
-$bday = $_POST['bday'];
-$gender = $_POST['gender'];
-$email = $_POST['email'];
-$UserName = $_POST['userName'];
-$Password = $_POST['password'];
-$pswRepeat = $_POST['psw-repeat'];
 
+define('HOST_NAME', "localhost");
+define('USER_NAME', "root");
+define('PASSWORD', "root");
 
-$dbConnect = mysqli_connect($hostName, $userName, $password);
+// Security Check
+if (!isset($_POST['submit']))
+{
+    die("Submission Failed, no data received!");
+}
+else
+{
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+    $bday = $_POST['bday'];
+    $gender = $_POST['gender'];
+    $email = $_POST['email'];
+    $UserName = $_POST['userName'];
+    $Password = $_POST['password'];
+    $pswRepeat = $_POST['psw-repeat'];
+}
 
+$dbConnect = mysqli_connect(HOST_NAME, USER_NAME, PASSWORD);
 // Check connection
 if (!$dbConnect) 
 {
