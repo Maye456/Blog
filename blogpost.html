@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <!-- 
 	Author: Jeanna Maye E. Benitez
-	File: login.html
-	Date: March 04, 2020
+	File: blogpost.html
+	Date: February 27, 2020
 	
 	Description: 
-	An HTML form to take user input for login.
+	An HTML form to take user input for a blog post.
+	
+	Link: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_blog_layout
  -->
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Login</title>
+		<title>Create Blog Post</title>
 		<link rel="icon" href="Images/Krypto Blog Logo.png">
 	</head>
 	
@@ -31,7 +33,7 @@ body {
 .container {
   padding: 16px;
   background-color: white;
-  width: 50%;
+  width: 60%;
   margin: auto;
 }
 
@@ -58,7 +60,7 @@ hr {
 }
 
 /* Set a style for the submit button */
-.loginbtn {
+.createPostBtn {
   background-color: #0097f1;
   color: white;
   padding: 16px 20px;
@@ -76,7 +78,7 @@ a {
 }
 
 /* Set a grey background color and center the text of the "sign in" section */
-.register {
+.signin {
   background-color: #f1f1f1;
   text-align: center;
   width: 100%;
@@ -84,40 +86,36 @@ a {
 </style>
 
 <body>
-	<!-- Login Form start -->
-	<div align="center" class="container">
+	<form action="posthandler.php" method="POST">
+	<div class="container">	
 		<table border="0" align="center">
 			<tr>
 				<td>
 					<img src="Images/logo2.png" alt="logo" width="225px" height="225px">
 				</td>
 				<td>
-					<header id="header">
-						<h1 style="color:black;"><font size="10">Login Form</font></h1>
-						<p>Please Fill Out The Following Information</p>
-					</header>
+					<h1 style="color:black;"><font size="10">Create A Blog Post</font></h1>
 				</td>
 			</tr>
-		</table>
-	<hr>
-	<div align="center">
-		<!-- On submit call PHP script pageHandler.php -->
-		<form method="POST" action="loginHandler.php">
-				<!-- UserName -->
-			<label>Username*</label><br/>
-			<input name="userName" type="text" required /><br/>
-				<!-- Password -->
-			<label>Password*</label><br/>
-			<input name="password" type="password" required /><br/>
-			<button type="submit" class="loginbtn" name="submit">Sign in</button>
-		
-			<div class="container register">
-				<p>Don't have an account? <a href="registration.html">Register</a></p>
+		</table>	
+			<hr>	<!-- Tabs -->
+			<p>
+				<a href="index.html">Home</a>
+			</p>
+			<hr>
+			
+			<div align="center">
+				<p>
+					<label>Title*</label> <br> 
+					<input type="text" name="title" maxlength="50" size="50">
+				</p>
+				<p>
+					<label>Content*</label> <br>
+					<textarea name="content" rows="15" cols="100"></textarea>
+				</p>
+				<input class="createPostBtn" type="submit" name="submit" value="Create Post">
 			</div>
-		<hr>
-		</form>
-	<!-- Login Form end -->
-	</div>
-	</div>
+		</div>
+	</form>
 </body>
 </html>
