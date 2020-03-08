@@ -44,23 +44,26 @@ function getUserID()
     return $_SESSION['userID'];
 }
 
-function setFirstName($firstName)
+function filterWords($content)
 {
-    $_SESSION['firstName'] = $firstName;
+    // Censor Bad Words
+    $badwords = array ("shit", "crap", "ass");
+    $filterCount = sizeof($badwords);
+    for($i=0; $i<$filterCount; $i++)
+    {
+        $content = str_replace($badwords[$i], str_repeat('*',strlen('$0')), $content);
+    }
+    return $content;
 }
 
-function getFirstName()
-{
-    return $_SESSION['firstName'];
-}
-
-function setLastName($lastName)
-{
-    $_SESSION['lastName'] = $lastName;
-}
-
-function getLastName()
-{
-    return $_SESSION['lastName'];
+function checkBadWords($content, $badWords) {
+    foreach ($badWords as $word) 
+    {
+        if (stripos(" $content ", " $word ") !== false) 
+        {
+            die("<p>Foul language was detected in the post you tried to make. Please retry your post.</p>");
+        }
+    }
+    return true;
 }
 ?>

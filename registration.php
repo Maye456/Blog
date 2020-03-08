@@ -81,7 +81,11 @@ if ($dbConnect)
         {
             // Success
             echo "<p>Records inserted successfully.</p>";
-        } 
+        }
+        else
+        {
+            echo "ERROR: " . mysqli_error($dbConnect);
+        }
     }
 }
 else 
