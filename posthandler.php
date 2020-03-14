@@ -52,11 +52,11 @@ if ($dbConnect)
     // Check String for null
     if ($title === NULL || $title === EMPTY_STRING) 
     {
-        echo "<p>First Name is a <em>required</em> field, it cannot be blank </p>";
+        echo "<p>Title is a <em>required</em> field, it cannot be blank </p>";
     } 
     else if ($content === NULL || $content === EMPTY_STRING) 
     {
-        echo "<p>Last Name is a <em>required</em> field, it cannot be blank </p>";
+        echo "<p>Content is a <em>required</em> field, it cannot be blank </p>";
     } 
     else 
     {
