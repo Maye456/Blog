@@ -11,7 +11,7 @@
  -->
 <html>
 <head>
-	<meta charset="UTF-8">
+<meta charset="UTF-8">
 	<title>Krypto Blogs</title>
 	<link rel="icon" href="Images/Krypto Blog Logo.png">
 	<link rel="stylesheet" type="text/css" href="postStyle.css">
@@ -19,7 +19,7 @@
 </head>
 
 <body>
-	<form action="posthandler.php" method="POST">
+	<form action="searchHandler.php" method="POST">
 		<div class="container">	
 			<table border="0" align="center">
 				<tr>
@@ -35,28 +35,23 @@
 			<div class="topnav">
 		    	<a href="index.html">Home</a>
 	    		<a href="whoami.php">Who Am I?</a>
-	    		<a class="active" href="blogpost.html">Create A Blog Post</a>
+	    		<a href="blogpost.html">Create A Blog Post</a>
 	    		<a href="makeBlogRequest.php">List Blogs</a>
 	    		<a href="registration.html">Register</a>
 	    		<a href="login.html">Login</a>
-				<a href="searchBlogs.html">Search Blogs</a>
+    			<a class="active" href="searchBlogs.html">Search Blogs</a>
 			</div>
 		<hr>
 			<div align="center">
-				<h1>Create A Blog Post</h1>
-				<p><u>Please Fill Out The Form To Create An Account</u>.</p>
-			</div>	
-					
-			<div align="center">
 				<p>
-					<label>Title*</label> <br> 
-					<input type="text" name="title" maxlength="50" size="50">
+					<label>Search Title</label> <br> 
+					<input type="text" name="searchTitle" maxlength="50" size="50">
 				</p>
 				<p>
-					<label>Content*</label> <br>
-					<textarea name="content" rows="16" cols="90"></textarea>
+					<label>Search Content</label> <br>
+					<input type="text" name="searchContent" maxlength="50" size="50">
 				</p>
-				<input class="createPostBtn" type="submit" name="submit" value="Create Post">
+				<input type="submit" name="submit" value="Search">
 			</div>
 		</div>
 	</form>

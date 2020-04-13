@@ -10,79 +10,12 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Login</title>
+		<title>Krypto Blogs</title>
 		<link rel="icon" href="Images/Krypto Blog Logo.png">
+		<link rel="stylesheet" type="text/css" href="loginStyle.css">
+		<link rel="stylesheet" type="text/css" href="navbarStyle.css">
 	</head>
 	
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url('Images/8iEbRgorT.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Add padding to containers */
-.container {
-  padding: 16px;
-  background-color: white;
-  width: 50%;
-  margin: auto;
-}
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 75%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-  font-size: 16px
-}
-
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Overwrite default styles of hr */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for the submit button */
-.loginbtn {
-  background-color: #0097f1;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 75%;
-  opacity: 0.9;
-  font-size:14px
-}
-
-/* Add a blue text color to links */
-a {
-  color: dodgerblue;
-}
-
-/* Set a grey background color and center the text of the "sign in" section */
-.register {
-  background-color: #f1f1f1;
-  text-align: center;
-  width: 100%;
-}
-</style>
-
 <body>
 	<!-- Login Form start -->
 	<div align="center" class="container">
@@ -93,31 +26,45 @@ a {
 				</td>
 				<td>
 					<header id="header">
-						<h1 style="color:black;"><font size="10">Login Form</font></h1>
-						<p>Please Fill Out The Following Information</p>
+						<h1 style="color:black;"><font size="10">Krypto Blogs</font></h1>
 					</header>
 				</td>
 			</tr>
 		</table>
+	<hr>	
+		<div class="topnav">
+	    	<a href="index.html">Home</a>
+	    	<a href="whoami.php">Who Am I?</a>
+	    	<a href="blogpost.html">Create A Blog Post</a>
+	    	<a href="makeBlogRequest.php">List Blogs</a>
+	    	<a href="registration.html">Register</a>
+	    	<a class="active" href="login.html">Login</a>
+    		<a href="searchBlogs.html">Search Blogs</a>
+		</div>
 	<hr>
-	<div align="center">
-		<!-- On submit call PHP script pageHandler.php -->
-		<form method="POST" action="loginHandler.php">
-				<!-- UserName -->
-			<label>Username*</label><br/>
-			<input name="userName" type="text" required /><br/>
-				<!-- Password -->
-			<label>Password*</label><br/>
-			<input name="password" type="password" required /><br/>
-			<button type="submit" class="loginbtn" name="submit">Sign in</button>
+		<div align="center">
+			<h1>Login Form</h1>
+			<p><u>Please Fill Out The Form To Create An Account</u>.</p>
+		</div>
 		
-			<div class="container register">
-				<p>Don't have an account? <a href="registration.html">Register</a></p>
-			</div>
-		<hr>
-		</form>
-	<!-- Login Form end -->
-	</div>
+		<div align="center">
+			<!-- On submit call PHP script pageHandler.php -->
+			<form method="POST" action="loginHandler.php">
+					<!-- UserName -->
+				<label>Username*</label><br/>
+				<input name="userName" type="text" required /><br/>
+					<!-- Password -->
+				<label>Password*</label><br/>
+				<input name="password" type="password" required /><br/>
+				<button type="submit" class="loginbtn" name="submit">Sign in</button>
+			
+				<div class="container register">
+					<p>Don't have an account? <a href="registration.html">Register</a></p>
+				</div>
+			<hr>
+			</form>
+		<!-- Login Form end -->
+		</div>
 	</div>
 </body>
 </html>

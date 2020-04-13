@@ -1,7 +1,7 @@
 <?php
 /* Author: Jeanna Maye E. Benitez
     File: myfuncs.php
-    Date: March 04, 2020
+    Date: March 15, 2020
  
     Description:
     A PHP file that has common functions to call upon.
@@ -18,6 +18,10 @@ error_reporting(E_ALL);
 define('HOST_NAME', "localhost");
 define('USER_NAME', "root");
 define('PASSWORD', "root");
+
+// define('HOST_NAME', "kryptoblogsmilestone.mysql.database.azure.com");
+// define('USER_NAME', "jbenitez13@kryptoblogsmilestone");
+// define('PASSWORD', "Lola110618");
 
 /**
  * @param dbName

@@ -43,7 +43,7 @@ if ($dbConnect)
     // Check String for null
     if($userName === NULL || $userName === EMPTY_STRING)
     {
-        echo "<p>UserName is a <em>required</em> field, it cannot be blank </p>";
+        echo "<p>Username is a <em>required</em> field, it cannot be blank </p>";
     }
     else if($password === NULL || $password === EMPTY_STRING)
     {
@@ -83,6 +83,5 @@ else
 {
     echo "<p>ERROR: " . $dbConnect->error() . "</p>";
 }
-echo "Database Closing...";
 $dbConnect->close(); 
 ?>
